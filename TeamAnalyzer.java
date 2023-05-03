@@ -1,4 +1,13 @@
-    public static void main(String... args) throws Exception {
+import java.sql.*;
+
+public class TeamAnalyzer {
+    // All the "against" column suffixes:
+    static String[] types = {
+        "bug","dark","dragon","electric","fairy","fight",
+        "fire","flying","ghost","grass","ground","ice","normal",
+        "poison","psychic","rock","steel","water"
+    };
+public static void main(String... args) throws Exception {
         // Take six command-line parameters
         if (args.length < 6) {
             print("You must give me six Pokemon to analyze");
